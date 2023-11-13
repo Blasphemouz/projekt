@@ -51,7 +51,7 @@ h1 {
     cursor: pointer;
 }
 
-.buttons p {
+.buttons span {
     margin-top: 18px;
     text-align: center;
     font-size: 22px
