@@ -1,0 +1,48 @@
+{ "Delta kohvik": {
+    "Aadress": "Narva mnt 18",
+    "Lahtiolekuajad": "E-R kell 11.00-17.00",
+    "Hinnaklass": "$$",
+    "Kirjeldus": "Delta kohvik on klassikaline koolikohvik, mis asub Delta esimesel korrusel. Seal saab nautida maitsvaid toite, olles ümbritsetud ülikooli kiiresti ja busy-st atmosfäärist. Suveti on avatud ka väliterrass, kus saab sooja päikese käes imetleda Emajõe ja rohelusega sisustatud vaadet.",
+    "Avalik hinnang": 3.5
+  },
+
+  "Restoran Muru": {
+    "Aadress": "Roheline tänav 14, Tähtvere küla",
+    "Lahtiolekuajad": "E-R kell 10.00-19.30, L-P 10.00-17.30",
+    "Hinnaklass": "$",
+    "Kirjeldus": "Kui otsite kohta, kus saab nautida enda toitu olles ümbritsetud rohelisusest ja hubasest keskkonnast, siis Restoran Muru on selle jaoks õige valik. Tartu Tähtveres asuvas restoranis ootavad teid külalislahked teenindajad ning maitsvad ja kosutavad road. Iga päev kell 10-12 pakutakse Murus hommikumenüüd ja tööpäevadel kella 12-15 vahemikus on pakkumises ka päevapraad ja ka kõigi lemmik: supp! Restoran on piisavalt suur - mahutab lausa 150 inimest - nii et koha leiab kõigile. Suveperioodil on avatud ka õueala. Samuti on alati võimalus (kokkuleppel) korraldada ka mitme sajale külalisele üritusi, isegi väljaspool lahtiolekuaegu.",
+    "Avalik hinnang": 4.6
+  },
+
+  "Kohvik-Resto Trikster Tihane": {
+    "Aadress": "Kastani tänav 42",
+    "Lahtiolekuajad": "E-R kell 11.00-17.00",
+    "Hinnaklass": "$$",
+    "Kirjeldus": "Delta kohvik on klassikaline koolikohvik, mis asub Delta esimesel korrusel. Seal saab nautida maitsvaid toite, olles ümbritsetud ülikooli kiiresti ja busy-st atmosfäärist. Suveti on avatud ka väliterrass, kus saab sooja päikese käes imetleda Emajõe ja rohelusega sisustatud vaadet.",
+    "Avalik hinnang": 3.5
+  },
+
+  "Beckeri pubi": {
+    "Aadress": "Kastani tänav 42",
+    "Lahtiolekuajad": "E-N kell 11.30-21.00, R kell 11.30-22.00, L 12.00-22.00",
+    "Hinnaklass": "$",
+    "Kirjeldus": "Tartu Aparaaditehases leidub mitmeid häid söögikohti ning üks kõige märkimisväärsematest neist on Kohvik-Resto Trikster Tihane. Oma modernse sisekujunduse ja heade toitudega muutub Trikster Tihane peale esimest külaliskäiku teie uueks lemmikuks. Menüüst võib leida hommikusööke, lõunapakkumisi, a la carte menüüd ja ka taimetoidu võimalusi. Siseruumis on 80 kohta ning see sobib igasuguste ürituste korraldamiseks. Lisaks sellele kõigele, on võimalik Trikster Tihasest tellida ka catering teenust.",
+    "Avalik hinnang": 4.6
+  },
+
+  "Restoran Balkan": {
+    "Aadress": "Rüütli tänav 5",
+    "Lahtiolekuajad": "E-P 12.00-00.00",
+    "Hinnaklass": "$$",
+    "Kirjeldus": "Kui tunnete soovi millegi erineva ja teistsuguse vastu, siis Restoran Balkan just seda pakubki. Toidumenüüst võib leida traditsioonilis Bulgaaria ja Kreeka roogasid, mida ükski teine restoran ei paku. Õhkkonna õhutamiseks kuuleb restoranis ka bulgaaria ja kreeka muusikat ning teenindus on nagu Balkani kultuurile omane sõbralik ja külalislahke. Restoran pakub päevapraade ja suppe. Ettetellimisel saab ka broneerida privaatse ruumi peolauaga, mis mahutab 15 inimest.",
+    "Avalik hinnang": 3.5
+  },
+
+  "Tartu Ränduri Pubi": {
+    "Aadress": "Turu tänav 2",
+    "Lahtiolekuajad": "E-L 10.00-21.00, P 10.00-18.00",
+    "Hinnaklass": "$$",
+    "Kirjeldus": "Nagu nimigi ütleb, tõmbab Ränduri Pubi tänu oma asukohale - Tartu keskuse teisel korrusel ja Tartu bussijaama läheduses - kõiki väsinuid šoppajaid ja reisiselle. Pubi interjöör loob tänu rohkele puidust mööblile hubase keskkonna. Kui satute olema Tartu keskuses kella 11.45 - 14.30 paiku, siis kindlasti külastage Ränduri Pubi, et mitte ilma jääda nende rikkaliku valikuga ja klientide poolt kiidetud lõunabuffeest. Pubis on ka laste mängutuba, nii et  tegevust leiab kõigile. Siseruum mahutab 130 inimest.",
+    "Avalik hinnang": 4.0
+  }
+}
