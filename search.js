@@ -23,7 +23,7 @@ let kohad = [
     PiltURL: "https://visittartu.com/sites/default/files/vemedia/275190_59f2346d134cedd6a6caa1e4bc3db484.jpg"
   },
   {
-    Nimi: "Kohvik-Resto Trikster Tihane",
+    Nimi: "Trikster Tihane",
     Info: {
       Aadress: "Kastani tänav 42",
       Lahtiolekuajad: "E-N 11.30-21.00, R 11.30-22.00, L 12.00-22.00",
@@ -56,7 +56,7 @@ let kohad = [
     PiltURL: "https://www.restoranbalkan.ee/uploads/images/Gallery/pildigalerii/rest-1.jpg"
   },
   {
-    Nimi: "Tartu Ränduri Pubi",
+    Nimi: "Ränduri Pubi",
     Info: {
       Aadress: "Turu tänav 2",
       Lahtiolekuajad: "E-L 10.00-21.00, P 10.00-18.00",
@@ -67,7 +67,7 @@ let kohad = [
     PiltURL: "https://visittartu.com/sites/default/files/vemedia/241045_25608a163640da05f0f43e7fe68b03f1.jpg"
   },
   {
-    Nimi: "Restoran Püssirohukelder",
+    Nimi: "Püssirohukelder",
     Info: {
       Aadress: "Lossi tänav 28",
       Lahtiolekuajad: "P-T 12.00-22.00, K-L 12.00-01.00",
@@ -124,11 +124,11 @@ let kohad = [
 ]
 
 // Nupule vajutuse kontroll
-document.querySelectorAll('.card').forEach(restoran => {
+document.querySelectorAll('.nimi').forEach(restoran => {
   restoran.addEventListener('click', function(event) {
     localStorage.removeItem('RestoraniInfo');
     // Söögikoha nime meeldejätmine
-    let söögikoht = event.target.innerText;
+    let söögikoht = event.currentTarget.querySelector('h4').innerText;
     // Vajalike andmete leidmine
     let andmed = kohad.find(rest => rest.Nimi === söögikoht)
     if (andmed) {
