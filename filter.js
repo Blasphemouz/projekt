@@ -1,24 +1,37 @@
+/* Valime välja kõik checkbox ehk filtrinuppude elemendid */
 var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+/* Valime välja kõiki söögikohti */
 var listItems = document.querySelectorAll('#restaurants li');
 
 checkboxes.forEach(function(checkbox) {
+  /* Kui tekib muudatud (nt. nupp on vajutatud) käivitab all välja kirjutatud funktsiooni */
   checkbox.addEventListener('change', function() {
+    /* Kõik vajutatud nupud lähevad muutujasse selectedFilters */
     var selectedFilters = Array.from(checkboxes)
+      /*Filtreerib välja nuppe, mis pole vajutatud */
       .filter(function(checkbox) {
+        /* Tagastab nuppe, mis on vajutatud */
         return checkbox.checked;
       })
+      /* iga vajutatud nupu kohta nimekirjas teeb muudatuse */
       .map(function(checkedCheckbox) {
+        /* Tagastab vajutatud nuppude id-d */
         return checkedCheckbox.id;
       });
-
+    /* Iga söögikoha kohta */
     listItems.forEach(function(listItem) {
+      /* söögikoha klassid, ehk filtrid */
       var listItemClasses = Array.from(listItem.classList);
-
+      /* Kui on valitud mingi filter */
       if (selectedFilters.length === 0 || selectedFilters.every(function(filter) {
+        /* Tagastab söögikohti mille klassides on valitud filter */
         return listItemClasses.includes(filter);
       })) {
+        /* Kui söögikohal on see filter: css klass eemaldatakse, et juhul kui see oli peidetud see saaks uuesti nähtavaks */
         listItem.classList.remove('hide');
       } else {
+        /* Kui söögikohal puudub see filter: lisandub css klass hide, mis peidab seda söögikohta */
         listItem.classList.add('hide');
       }
     });
