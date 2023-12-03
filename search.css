@@ -1,5 +1,5 @@
 *{
-    font-family: inter;
+    font-family: 'Inter', sans-serif;
 }
 
 h4 {
@@ -8,18 +8,20 @@ h4 {
     margin-top: 25px;
     margin-bottom: 8px;
     padding: 0;
+    z-index: 1;
 }
 
 h3{
     font-size: 25px;
-    font-weight: 400; /* regular */
+    font-weight: 400;
 }
 
 h1 {
-    font-size: 50px;
-    font-weight: 600; /* semi-bold */
+    font-size: 45px;
+    font-weight: 500; /* semi-bold */
     width: 60vw;
     margin-bottom: 60px;
+    margin-top: 40px;
 }
 
 a {
@@ -31,7 +33,7 @@ a {
     text-align: center;
     display: flex;
     justify-content: center;
-    align-items: center;/* Adjust the height as needed */
+    align-items: center;
     height: 10vh;
 }
 
@@ -44,6 +46,14 @@ a {
     margin-left: 12.5vw;
     max-width: 800px;
 }
+
+button.nimi {
+    background-color: transparent;
+    border: none;
+    width: 300px;
+    padding: 0;
+    position: relative;
+  }
 
 .buttons {
     display: flex;
@@ -119,7 +129,7 @@ input[type="checkbox"]:checked:hover + label svg {
 }
 
 .card:hover .card-image{
-    transform: scale(1.25);
+    transform: scale(1.15);
 }
 
 .card a {
@@ -189,7 +199,6 @@ input[type="checkbox"]:checked:hover + label svg {
     margin-left: 83px;
     margin-right: 60.7px;
 }
-
 
 .star {
     margin: 0px;

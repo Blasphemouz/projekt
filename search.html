@@ -3,15 +3,18 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Veebilehe nimi</title>
+    <title>Nimekiri</title>
     <link rel="stylesheet" href="./search.css">
 
     <!-- font link-->
     <link rel="preconnect" href="https://rsms.me/">
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+
+
+    <script src="./search.js" defer></script>
   </head>
   <body>
-    <h3 class="centered-text"><a href="index.html" class="pealkiri">Veebilehe nimi</a></h3>
+    <h3 class="centered-text"><a href="index.html" class="pealkiri">Esileht</a></h3>
     <div class="sisu">
       <h1>Leia endale meelepärane söögikoht</h1>
 
@@ -126,7 +129,7 @@
       <ul id="restaurants">
 
           <li class="card pubi">
-            <a href="becker.html">
+            <button class="nimi">
               <img class="card-image" src="./assets/becker/becker-sees.png" alt="Beckeri pubi pilt" width="240" height="140">
               <h4>Beckeri pubi</h4>
               <div class="filtrid">
@@ -142,11 +145,11 @@
                   <img src="./assets/medium-bold.svg" alt="$$">
                 </div>
               </div>
-            </a>
+            </button>
           </li>
 
           <li class="card kohvik">
-            <a href="delta.html">
+            <button class="nimi">
               <img class="card-image" src="./assets/delta/delta-sees.png" alt="Delta kohviku pilt" width="240" height="140">
               <h4>Delta kohvik</h4>
               <div class="filtrid">
@@ -162,11 +165,11 @@
                   <img src="./assets/medium-bold.svg" alt="$$">
                 </div>
               </div>
-            </a>
+            </button>
           </li>
 
           <li class="card kohvik">
-            <a href="muru.html">
+            <button class="nimi">
               <img class="card-image" src="./assets/muru/muru-sees.png" alt="Restoran muru pilt" width="240" height="140">
               <h4>Restoran Muru</h4>
               <div class="filtrid">
@@ -182,11 +185,11 @@
                   <img src="./assets/cheap-bold.svg" alt="$">
                 </div>
               </div>
-            </a>
+            </button>
           </li>
 
           <li class="card kohvik">
-            <a href="tihane.html">
+            <button class="nimi">
               <img class="card-image" src="./assets/tihane/tihane-sees.png" alt="Kohvik-Resto Trikster Tihane pilt" width="240" height="140">
               <h4>Trikster Tihane</h4>
               <div class="filtrid">
@@ -202,11 +205,11 @@
                   <img src="./assets/cheap-bold.svg" alt="$">
                 </div>
               </div>
-            </a>
+            </button>
           </li>
 
           <li class="card burger">
-            <a href="tihane.html">
+            <button class="nimi">
               <img class="card-image" src="./assets/balkan/balkan-sees.png" alt="Restoran Balkan pilt" width="240" height="140">
               <h4>Restoran Balkan</h4>
               <div class="filtrid">
@@ -222,11 +225,11 @@
                   <img src="./assets/medium-bold.svg" alt="$$">
                 </div>
               </div>
-            </a>
+            </button>
           </li>
 
           <li class="card pubi">
-            <a href="randuri.html">
+            <button class="nimi">
               <img class="card-image" src="./assets/randuri/randuri-sees.png" alt="Ränduri Pubi pilt" width="240" height="140">
               <h4>Ränduri Pubi</h4>
               <div class="filtrid">
@@ -242,11 +245,11 @@
                   <img src="./assets/medium-bold.svg" alt="$$">
                 </div>
               </div>
-            </a>
+            </button>
           </li>
 
           <li class="card burger">
-            <a href="pussirohu.html">
+            <button class="nimi">
               <img class="card-image" src="./assets/pussirohu/pussirohu-sees.png" alt="Püssirohu keldri pilt" width="240" height="140">
               <h4>Püssirohukelder</h4>
               <div class="filtrid">
@@ -262,11 +265,11 @@
                   <img src="./assets/medium-bold.svg" alt="$$">
                 </div>
               </div>
-            </a>
+            </button>
           </li>
 
           <li class="card vegan">
-            <a href="kampus.html">
+            <button class="nimi">
               <img class="card-image" src="./assets/kampus/kampus-sees1.png" alt="Restoran Kampus pilt" width="240" height="140">
               <h4>Restoran Kampus</h4>
               <div class="filtrid">
@@ -282,11 +285,11 @@
                   <img src="./assets/medium-bold.svg" alt="$$">
                 </div>
               </div>
-            </a>
+            </button>
           </li>
           
           <li class="card pitsa isic">
-            <a href="vapiano.html">
+            <button class="nimi">
               <img class="card-image" src="./assets/vapiano/vapiano-sees1.png" alt="Vapiano pilt" width="240" height="140">
               <h4>Vapiano</h4>
               <div class="filtrid">
@@ -303,13 +306,13 @@
                   <img src="./assets/medium-bold.svg" alt="$$">
                 </div>
               </div>
-            </a>
+            </button>
           </li>
 
           <li class="card sushi isic">
-            <a href="tokyo.html">
+            <button class="nimi">
               <img class="card-image" src="./assets/tokyo/tokyo-sees1.png" alt="Tokyo Sushi Bar pilt" width="240" height="140">
-              <h4>Tokyo Sushi Bar</h4>
+              <h4>Tokyo sushibaar</h4>
               <div class="filtrid">
                 <img src="./assets/sushi.svg" alt="sushi">
                 <img src="./assets/isic.svg" alt="isic">
@@ -324,11 +327,11 @@
                   <img src="./assets/medium-bold.svg" alt="$$">
                 </div>  
               </div>
-            </a>
+            </button>
           </li>
 
           <li class="card isic">
-            <a href="wokstop.html">
+            <button class="nimi">
               <img class="card-image" src="./assets/wokstop/wokstop-toit.png" alt="Wok Stop pilt" width="240" height="140">
               <h4>Wok Stop</h4>
               <div class="filtrid">
@@ -344,13 +347,13 @@
                   <img src="./assets/cheap-bold.svg" alt="$">
                 </div>  
               </div>
-            </a>
+            </button>
           </li>
 
       </ul>
     </div>
     <!-- filter.js filtreerib restoranide "kaarte" vastavalt nende klassile-->
-    <script src="./filter.js"></script>
+    <script src="filter.js"></script>
   </body>
 </html>
 
