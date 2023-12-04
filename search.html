@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ee">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nimekiri</title>
+    <link rel="stylesheet" href="./search.css">
+
+    <!-- font link-->
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+
+
+    <script src="./search.js" defer></script>
+  </head>
+  <body>
+    <h3 class="centered-text"><a href="index.html" class="pealkiri">Esileht</a></h3>
+    <div class="sisu">
+      <h1>Leia endale meelepärane söögikoht</h1>
+
+      <!--Filtrite nupud. imporditud <svg> elemendina, et lisada efekte peale klõpsamisel jm.-->
+      <div class="buttons">
+
+        <input type="checkbox" id="burger">
+          <label for="burger">
+            <svg width="105" height="105" viewBox="0 0 105 105" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="52.5" cy="52.5" r="52.5" fill="#D7CFF4"/>
+              <path d="M29.0425 66.1128H75.3358V69.1854C75.3358 71.3585 74.4726 73.4425 72.936 74.9791C71.3994 76.5157 69.3154 77.3789 67.1423 77.3789H37.236C35.0629 77.3789 32.9789 76.5157 31.4423 74.9791C29.9057 73.4425 29.0425 71.3585 29.0425 69.1854V66.1128Z" stroke="black" stroke-width="4.09676" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M69.8048 53.6176H75.1307C75.9548 53.5901 76.7759 53.7288 77.5453 54.0253C78.3146 54.3217 79.0165 54.77 79.609 55.3434C80.2015 55.9168 80.6725 56.6036 80.994 57.3628C81.3156 58.122 81.4811 58.9382 81.4806 59.7627C81.4806 61.4468 80.8116 63.062 79.6208 64.2528C78.4299 65.4437 76.8148 66.1127 75.1307 66.1127H29.2469C28.4224 66.1132 27.6063 65.9477 26.8471 65.6262C26.0878 65.3046 25.401 64.8335 24.8276 64.241C24.2542 63.6485 23.8059 62.9467 23.5094 62.1773C23.213 61.408 23.0743 60.5868 23.1018 59.7627C23.0732 58.948 23.2126 58.1362 23.5113 57.3777C23.81 56.6191 24.2616 55.9302 24.8381 55.3538C25.4145 54.7774 26.1034 54.3258 26.8619 54.0271C27.6204 53.7284 28.4322 53.589 29.2469 53.6176H47.2727" stroke="black" stroke-width="4.09676" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M81.4811 49.5207C81.4658 50.6013 81.0241 51.6321 80.2522 52.3885C79.8931 52.7905 79.4501 53.1089 78.9547 53.3213C78.4592 53.5336 77.9232 53.6347 77.3844 53.6175H66.7328L59.7684 61.6062L52.8038 53.6175H26.9943C26.4655 53.6182 25.9421 53.5112 25.456 53.3029C24.9699 53.0946 24.5314 52.7895 24.1672 52.4061C23.803 52.0227 23.5208 51.5692 23.3377 51.0731C23.1546 50.577 23.0745 50.0488 23.1023 49.5207C23.0745 48.9926 23.1546 48.4645 23.3377 47.9684C23.5208 47.4723 23.803 47.0187 24.1672 46.6353C24.5314 46.252 24.9699 45.9468 25.456 45.7385C25.9421 45.5303 26.4655 45.4232 26.9943 45.424H77.3844C78.4709 45.424 79.513 45.8556 80.2813 46.6239C81.0496 47.3922 81.4811 48.4342 81.4811 49.5207Z" stroke="black" stroke-width="4.09676" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M46.6585 27.1935H57.9246C62.5967 27.1935 67.0774 29.0494 70.381 32.3531C73.6847 35.6567 75.5407 40.1375 75.5407 44.8096H29.0425C29.0425 40.1375 30.8984 35.6567 34.2021 32.3531C37.5057 29.0494 41.9864 27.1935 46.6585 27.1935Z" stroke="black" stroke-width="4.09676" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M40.7181 36.4113L43.1762 39.0742" stroke="black" stroke-width="4.09676" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M62.8411 35.3872L65.5039 38.2549" stroke="black" stroke-width="4.09676" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M50.5507 36.6163L53.4184 33.9534" stroke="black" stroke-width="4.09676" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>
+              Burger
+            </span>  
+          </label>
+
+        <input type="checkbox" id="pitsa">
+        <label for="pitsa">
+          <svg width="105" height="105" viewBox="0 0 105 105" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="52.5" cy="52.5" r="52.5" fill="#EACCCC"/>
+            <path d="M45.9188 37.6402L52.064 27.1934L76.4397 69.5948C60.0526 78.8126 43.8704 78.8126 27.4834 69.5948L39.364 49.111" stroke="black" stroke-width="4.09676" stroke-linejoin="round"/>
+            <path d="M30.9656 62.4255C37.2667 66.3467 44.5399 68.425 51.9615 68.425C59.383 68.425 66.6563 66.3467 72.9574 62.4255" stroke="black" stroke-width="4.09676" stroke-linejoin="round"/>
+            <path d="M55.9561 60.9918C58.1056 60.9918 59.8481 59.2494 59.8481 57.0999C59.8481 54.9505 58.1056 53.208 55.9561 53.208C53.8067 53.208 52.0642 54.9505 52.0642 57.0999C52.0642 59.2494 53.8067 60.9918 55.9561 60.9918Z" stroke="black" stroke-width="4.09676" stroke-linejoin="round"/>
+            <path d="M50.2206 43.7856C50.2206 45.5784 49.5084 47.2977 48.2407 48.5654C46.973 49.8331 45.2537 50.5453 43.4609 50.5453C41.9847 50.4769 40.5607 49.9785 39.3641 49.1114L45.9189 37.6405C47.1476 38.1475 48.2055 38.9956 48.9677 40.0845C49.73 41.1734 50.1647 42.4576 50.2206 43.7856Z" stroke="black" stroke-width="4.09676" stroke-linejoin="round"/>
+          </svg>
+          <span>
+            Pitsa
+          </span>  
+        </label>
+
+        <input type="checkbox" id="vegan">
+        <label for="vegan">
+          <svg width="105" height="105" viewBox="0 0 105 105" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="52.5" cy="52.5" r="52.5" fill="#CAEECB"/>
+            <path d="M27.0972 51.774H83.2228V57.0998C83.2228 62.3695 81.1295 67.4234 77.4032 71.1496C73.677 74.8758 68.6232 76.9692 63.3535 76.9692H46.9665C41.6968 76.9692 36.643 74.8758 32.9167 71.1496C29.1905 67.4234 27.0972 62.3695 27.0972 57.0998V51.774Z" stroke="black" stroke-width="4.09676" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M28.9409 27.808H29.7602C33.5087 27.808 37.1037 29.2971 39.7543 31.9477C42.4049 34.5983 43.8941 38.1932 43.8941 41.9418H43.0747C39.3261 41.9418 35.7312 40.4527 33.0806 37.8021C30.43 35.1515 28.9409 31.5565 28.9409 27.808Z" stroke="black" stroke-width="4.09676" stroke-linejoin="round"/>
+            <path d="M49.6293 31.6998C49.9625 29.8728 50.922 28.219 52.3425 27.0227C53.7631 25.8264 55.556 25.1625 57.4131 25.145C59.5155 25.1969 61.5174 26.0553 63.0045 27.5424C64.4916 29.0294 65.3499 31.0313 65.4018 33.1337C65.3658 33.9667 65.2282 34.7921 64.9921 35.5917L67.4502 35.1821C69.5526 35.234 71.5544 36.0924 73.0415 37.5794C74.5285 39.0665 75.3869 41.0684 75.4388 43.1708" stroke="black" stroke-width="4.09676" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M64.5821 43.7855C62.409 43.7855 60.325 42.9223 58.7884 41.3857C57.2518 39.8491 56.3885 37.765 56.3885 35.592" stroke="black" stroke-width="4.09676" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>
+            Vegan
+          </span>  
+        </label>
+
+        <input type="checkbox" id="sushi">
+        <label for="sushi">
+          <svg width="105" height="105" viewBox="0 0 105 105" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="52.5" cy="52.5" r="52.5" fill="#BEEDF7"/>
+            <path d="M56.0509 25.1452L37.2058 79.837" stroke="black" stroke-width="4.09676" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M26.145 71.2341L80.8367 52.3889" stroke="black" stroke-width="4.09676" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M64.4502 56.4855C71.9167 56.4855 77.9695 50.4328 77.9695 42.9663C77.9695 35.4998 71.9167 29.447 64.4502 29.447C56.9837 29.447 50.9309 35.4998 50.9309 42.9663C50.9309 50.4328 56.9837 56.4855 64.4502 56.4855Z" stroke="black" stroke-width="4.09676" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M64.45 47.8824C67.1651 47.8824 69.3661 45.6813 69.3661 42.9662C69.3661 40.2511 67.1651 38.05 64.45 38.05C61.7349 38.05 59.5339 40.2511 59.5339 42.9662C59.5339 45.6813 61.7349 47.8824 64.45 47.8824Z" stroke="black" stroke-width="4.09676" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>
+            Sushi
+          </span>  
+        </label>
+
+        <input type="checkbox" id="kohvik">
+        <label for="kohvik">
+          <svg width="105" height="105" viewBox="0 0 105 105" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="52.5" cy="52.5" r="52.5" fill="#ECE0C8"/>
+            <path d="M32.9049 40.3028H70.5952V64.2689C70.5952 66.8222 69.5809 69.271 67.7754 71.0765C65.9699 72.882 63.5211 73.8963 60.9677 73.8963H42.5323C39.979 73.8963 37.5303 72.882 35.7248 71.0765C33.9193 69.271 32.9049 66.8222 32.9049 64.2689V40.3028Z" stroke="black" stroke-width="4.09676" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M26.1449 73.8966H76.9447C76.9447 75.635 76.2541 77.3023 75.0248 78.5315C73.7956 79.7608 72.1284 80.4514 70.39 80.4514H32.9045C31.1661 80.4514 29.4989 79.7608 28.2697 78.5315C27.0404 77.3023 26.3498 75.635 26.3498 73.8966H26.1449Z" stroke="black" stroke-width="4.09676" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M37.9421 32.9676L40.158 25.7198" stroke="black" stroke-width="4.09676" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M62.9022 33.168L65.178 25.7242" stroke="black" stroke-width="4.09676" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M51 30.7561L53.0961 23.9" stroke="black" stroke-width="4.09676" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M70.5928 44.8095H80.4271V52.3885C80.4271 55.0505 79.3696 57.6034 77.4873 59.4858C75.605 61.3681 73.2549 62.4153 70.5929 62.4153L70.5928 44.8095Z" stroke="black" stroke-width="4.09676" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>
+            Kohvik
+          </span>  
+        </label>
+
+        <input type="checkbox" id="pubi">
+        <label for="pubi">
+          <svg width="105" height="105" viewBox="0 0 105 105" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="52.5" cy="52.5" r="52.5" fill="#DFE7AE"/>
+            <path d="M72.2481 40.4863C72.2481 41.2664 72.0945 42.0388 71.7959 42.7595C71.4974 43.4802 71.0598 44.1351 70.5082 44.6867C69.9566 45.2383 69.3018 45.6759 68.5811 45.9744C67.8603 46.2729 67.0879 46.4266 66.3078 46.4266H49.9208V58.7169C49.9208 59.8577 49.4676 60.9518 48.6609 61.7586C47.8542 62.5653 46.76 63.0185 45.6192 63.0185C44.4783 63.0185 43.3842 62.5653 42.5775 61.7586C41.7708 60.9518 41.3176 59.8577 41.3176 58.7169V46.4266H37.6305C36.1093 46.4266 34.6505 45.8223 33.5749 44.7467C32.4993 43.6711 31.895 42.2123 31.895 40.6911C31.895 39.17 32.4993 37.7111 33.5749 36.6355C34.6505 35.5599 36.1093 34.9557 37.6305 34.9557C38.0295 31.3662 39.7318 28.048 42.4145 25.63C45.0972 23.2121 48.5739 21.8625 52.1854 21.8373C55.7969 21.812 59.2921 23.1128 62.0083 25.493C64.7246 27.8732 66.4731 31.1673 66.9223 34.7508C68.3714 34.8546 69.727 35.5044 70.7156 36.5689C71.7041 37.6335 72.2518 39.0335 72.2481 40.4863Z" stroke="black" stroke-width="4.09676" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M58.9336 55.2349V72.2364" stroke="black" stroke-width="4.09676" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M45.6195 69.5732V73.4652" stroke="black" stroke-width="4.09676" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M33.7388 44.9927V75.5135C33.7388 76.6001 34.1704 77.6421 34.9387 78.4104C35.707 79.1787 36.749 79.6103 37.8355 79.6103H66.1032C67.1897 79.6103 68.2317 79.1787 69 78.4104C69.7683 77.6421 70.1999 76.6001 70.1999 75.5135V44.9927" stroke="black" stroke-width="4.09676" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M70.1996 50.1138H76.5496C77.3101 50.1138 78.0395 50.4159 78.5773 50.9537C79.1151 51.4915 79.4173 52.2209 79.4173 52.9815V65.8863C79.4173 66.6469 79.1151 67.3763 78.5773 67.9141C78.0395 68.4519 77.3101 68.754 76.5496 68.754H70.1996V50.3186V50.1138Z" stroke="black" stroke-width="4.09676" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>
+            Pubi
+          </span>  
+        </label>
+        
+        <input type="checkbox" id="isic">
+        <label for="isic">
+          <svg width="105" height="105" viewBox="0 0 105 105" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="52.5" cy="52.5" r="52.5" fill="#A4E9DD"/>
+            <path d="M33.0753 42.6364V63H28.7699V42.6364H33.0753ZM47.6644 48.4929C47.5849 47.6908 47.2435 47.0677 46.6403 46.6236C46.0371 46.1794 45.2184 45.9574 44.1843 45.9574C43.4817 45.9574 42.8884 46.0568 42.4045 46.2557C41.9206 46.4479 41.5494 46.7164 41.2908 47.0611C41.0389 47.4058 40.913 47.7969 40.913 48.2344C40.8997 48.599 40.976 48.9171 41.1417 49.1889C41.314 49.4607 41.5494 49.696 41.8477 49.8949C42.146 50.0871 42.4906 50.2562 42.8817 50.402C43.2728 50.5412 43.6905 50.6605 44.1346 50.7599L45.9641 51.1974C46.8524 51.3963 47.6677 51.6615 48.4102 51.9929C49.1526 52.3243 49.7956 52.732 50.3391 53.2159C50.8827 53.6998 51.3036 54.2699 51.6019 54.9261C51.9068 55.5824 52.0626 56.3348 52.0692 57.1832C52.0626 58.4295 51.7444 59.5099 51.1147 60.4247C50.4916 61.3329 49.5901 62.0388 48.4102 62.5426C47.2369 63.0398 45.8216 63.2884 44.1644 63.2884C42.5205 63.2884 41.0887 63.0365 39.869 62.5327C38.6559 62.0289 37.708 61.2831 37.0252 60.2955C36.3491 59.3011 35.9944 58.0715 35.9613 56.6065H40.1275C40.1739 57.2893 40.3694 57.8594 40.7141 58.3168C41.0655 58.7675 41.5328 59.1089 42.1161 59.3409C42.7061 59.5663 43.3723 59.679 44.1147 59.679C44.8439 59.679 45.4769 59.5729 46.0138 59.3608C46.5574 59.1487 46.9783 58.8537 47.2766 58.4759C47.5749 58.098 47.7241 57.6638 47.7241 57.1733C47.7241 56.7159 47.5882 56.3314 47.3164 56.0199C47.0513 55.7083 46.6602 55.4432 46.1431 55.2244C45.6327 55.0057 45.0063 54.8068 44.2638 54.6278L42.0465 54.071C40.3297 53.6534 38.9741 53.0005 37.9798 52.1122C36.9854 51.224 36.4916 50.0275 36.4982 48.5227C36.4916 47.2898 36.8197 46.2126 37.4826 45.2912C38.1521 44.3698 39.0702 43.6506 40.2369 43.1335C41.4035 42.6165 42.7293 42.358 44.2141 42.358C45.7255 42.358 47.0446 42.6165 48.1715 43.1335C49.305 43.6506 50.1867 44.3698 50.8164 45.2912C51.4461 46.2126 51.771 47.2798 51.7908 48.4929H47.6644ZM59.2706 42.6364V63H54.9652V42.6364H59.2706ZM80.7802 49.7656H76.4251C76.3455 49.2022 76.1831 48.7017 75.9379 48.2642C75.6926 47.8201 75.3777 47.4422 74.9933 47.1307C74.6088 46.8191 74.1647 46.5805 73.6609 46.4148C73.1637 46.2491 72.6235 46.1662 72.0401 46.1662C70.9862 46.1662 70.0681 46.428 69.2859 46.9517C68.5037 47.4687 67.8971 48.2244 67.4663 49.2188C67.0354 50.2064 66.82 51.4062 66.82 52.8182C66.82 54.2699 67.0354 55.4896 67.4663 56.4773C67.9038 57.465 68.5136 58.2107 69.2958 58.7145C70.078 59.2183 70.9828 59.4702 72.0103 59.4702C72.587 59.4702 73.1206 59.3939 73.6112 59.2415C74.1083 59.089 74.5491 58.867 74.9336 58.5753C75.3181 58.277 75.6362 57.9157 75.8881 57.4915C76.1467 57.0672 76.3256 56.5833 76.4251 56.0398L80.7802 56.0597C80.6675 56.9943 80.3858 57.8958 79.935 58.7642C79.4909 59.6259 78.891 60.3982 78.1353 61.081C77.3862 61.7571 76.4914 62.294 75.4506 62.6918C74.4165 63.0829 73.2466 63.2784 71.9407 63.2784C70.1244 63.2784 68.5004 62.8674 67.0685 62.0455C65.6433 61.2235 64.5165 60.0336 63.6879 58.4759C62.8659 56.9181 62.4549 55.0322 62.4549 52.8182C62.4549 50.5975 62.8725 48.7083 63.7077 47.1506C64.543 45.5928 65.6765 44.4062 67.1083 43.5909C68.5401 42.7689 70.1509 42.358 71.9407 42.358C73.1206 42.358 74.2144 42.5237 75.2219 42.8551C76.2362 43.1866 77.1344 43.6705 77.9165 44.3068C78.6987 44.9366 79.3351 45.7088 79.8256 46.6236C80.3228 47.5384 80.641 48.5857 80.7802 49.7656Z" fill="black"/>
+          </svg>
+          <span>
+            ISIC
+          </span>
+        </label>
+        
+      </div>
+
+<!-- Restoranide kaardid-->
+      <h1>Populaarsed söögikohad</h1>
+      <ul id="restaurants">
+
+          <li class="card pubi">
+            <button class="nimi">
+              <img class="card-image" src="./assets/becker/becker-sees.png" alt="Beckeri pubi pilt" width="240" height="140">
+              <h4>Beckeri pubi</h4>
+              <div class="filtrid">
+                <img src="./assets/pubi.svg" alt="pubi">
+              </div>
+              <div class="ratings">
+                <div class="star">
+                  <img src="./assets/star.svg" alt="star">
+                  <p>4.7</p>
+                </div>
+                <div class="vertical-line"></div>
+                <div class="price">
+                  <img src="./assets/medium-bold.svg" alt="$$">
+                </div>
+              </div>
+            </button>
+          </li>
+
+          <li class="card kohvik">
+            <button class="nimi">
+              <img class="card-image" src="./assets/delta/delta-sees.png" alt="Delta kohviku pilt" width="240" height="140">
+              <h4>Delta kohvik</h4>
+              <div class="filtrid">
+                <img src="./assets/kohvik.svg" alt="kohvik">
+              </div>
+              <div class="ratings">
+                <div class="star">
+                  <img src="./assets/star.svg" alt="star">
+                  <p>3.5</p>
+                </div>
+                <div class="vertical-line"></div>
+                <div class="price">
+                  <img src="./assets/medium-bold.svg" alt="$$">
+                </div>
+              </div>
+            </button>
+          </li>
+
+          <li class="card kohvik">
+            <button class="nimi">
+              <img class="card-image" src="./assets/muru/muru-sees.png" alt="Restoran muru pilt" width="240" height="140">
+              <h4>Restoran Muru</h4>
+              <div class="filtrid">
+                <img src="./assets/kohvik.svg" alt="kohvik">
+              </div>
+              <div class="ratings">
+                <div class="star">
+                  <img src="./assets/star.svg" alt="star">
+                  <p>4.6</p>
+                </div>
+                <div class="vertical-line"></div>
+                <div class="price">
+                  <img src="./assets/cheap-bold.svg" alt="$">
+                </div>
+              </div>
+            </button>
+          </li>
+
+          <li class="card kohvik">
+            <button class="nimi">
+              <img class="card-image" src="./assets/tihane/tihane-sees.png" alt="Kohvik-Resto Trikster Tihane pilt" width="240" height="140">
+              <h4>Trikster Tihane</h4>
+              <div class="filtrid">
+                <img src="./assets/kohvik.svg" alt="kohvik">
+              </div>
+              <div class="ratings">
+                <div class="star">
+                  <img src="./assets/star.svg" alt="star">
+                  <p>4.6</p>
+                </div>
+                <div class="vertical-line"></div>
+                <div class="price">
+                  <img src="./assets/cheap-bold.svg" alt="$">
+                </div>
+              </div>
+            </button>
+          </li>
+
+          <li class="card burger">
+            <button class="nimi">
+              <img class="card-image" src="./assets/balkan/balkan-sees.png" alt="Restoran Balkan pilt" width="240" height="140">
+              <h4>Restoran Balkan</h4>
+              <div class="filtrid">
+                <img src="./assets/burger.svg" alt="burger">
+              </div>
+              <div class="ratings">
+                <div class="star">
+                  <img src="./assets/star.svg" alt="star">
+                  <p>3.5</p>
+                </div>
+                <div class="vertical-line"></div>
+                <div class="price">
+                  <img src="./assets/medium-bold.svg" alt="$$">
+                </div>
+              </div>
+            </button>
+          </li>
+
+          <li class="card pubi">
+            <button class="nimi">
+              <img class="card-image" src="./assets/randuri/randuri-sees.png" alt="Ränduri Pubi pilt" width="240" height="140">
+              <h4>Ränduri Pubi</h4>
+              <div class="filtrid">
+                <img src="./assets/pubi.svg" alt="pubi">
+              </div>
+              <div class="ratings">
+                <div class="star">
+                  <img src="./assets/star.svg" alt="star">
+                  <p>4</p>
+                </div>
+                <div class="vertical-line"></div>
+                <div class="price">
+                  <img src="./assets/medium-bold.svg" alt="$$">
+                </div>
+              </div>
+            </button>
+          </li>
+
+          <li class="card burger">
+            <button class="nimi">
+              <img class="card-image" src="./assets/pussirohu/pussirohu-sees.png" alt="Püssirohu keldri pilt" width="240" height="140">
+              <h4>Püssirohukelder</h4>
+              <div class="filtrid">
+                <img src="./assets/burger.svg" alt="burger">
+              </div>
+              <div class="ratings">
+                <div class="star">
+                  <img src="./assets/star.svg" alt="star">
+                  <p>4.3</p>
+                </div>
+                <div class="vertical-line"></div>
+                <div class="price">
+                  <img src="./assets/medium-bold.svg" alt="$$">
+                </div>
+              </div>
+            </button>
+          </li>
+
+          <li class="card vegan">
+            <button class="nimi">
+              <img class="card-image" src="./assets/kampus/kampus-sees1.png" alt="Restoran Kampus pilt" width="240" height="140">
+              <h4>Restoran Kampus</h4>
+              <div class="filtrid">
+                <img src="./assets/vegan.svg" alt="vegan">
+              </div>
+              <div class="ratings">
+                <div class="star">
+                  <img src="./assets/star.svg" alt="star">
+                  <p>4.5</p>
+                </div>
+                <div class="vertical-line"></div>
+                <div class="price">
+                  <img src="./assets/medium-bold.svg" alt="$$">
+                </div>
+              </div>
+            </button>
+          </li>
+          
+          <li class="card pitsa isic">
+            <button class="nimi">
+              <img class="card-image" src="./assets/vapiano/vapiano-sees1.png" alt="Vapiano pilt" width="240" height="140">
+              <h4>Vapiano</h4>
+              <div class="filtrid">
+                <img src="./assets/pitsa.svg" alt="pitsa">
+                <img src="./assets/isic.svg" alt="isic">
+              </div>
+              <div class="ratings">
+                <div class="star">
+                  <img src="./assets/star.svg" alt="star">
+                  <p>4.2</p>
+                </div>
+                <div class="vertical-line"></div>
+                <div class="price">
+                  <img src="./assets/medium-bold.svg" alt="$$">
+                </div>
+              </div>
+            </button>
+          </li>
+
+          <li class="card sushi isic">
+            <button class="nimi">
+              <img class="card-image" src="./assets/tokyo/tokyo-sees1.png" alt="Tokyo Sushi Bar pilt" width="240" height="140">
+              <h4>Tokyo sushibaar</h4>
+              <div class="filtrid">
+                <img src="./assets/sushi.svg" alt="sushi">
+                <img src="./assets/isic.svg" alt="isic">
+              </div>
+              <div class="ratings">
+                <div class="star">
+                  <img src="./assets/star.svg" alt="star">
+                  <p>4.7</p>
+                </div>
+                <div class="vertical-line"></div>
+                <div class="price">
+                  <img src="./assets/medium-bold.svg" alt="$$">
+                </div>  
+              </div>
+            </button>
+          </li>
+
+          <li class="card isic">
+            <button class="nimi">
+              <img class="card-image" src="./assets/wokstop/wokstop-toit.png" alt="Wok Stop pilt" width="240" height="140">
+              <h4>Wok Stop</h4>
+              <div class="filtrid">
+                <img src="./assets/isic.svg" alt="isic">
+              </div>
+              <div class="ratings">
+                <div class="star">
+                  <img src="./assets/star.svg" alt="star">
+                  <p>4.3</p>
+                </div>
+                <div class="vertical-line"></div>
+                <div class="price">
+                  <img src="./assets/cheap-bold.svg" alt="$">
+                </div>  
+              </div>
+            </button>
+          </li>
+
+      </ul>
+    </div>
+    <!-- filter.js filtreerib restoranide "kaarte" vastavalt nende klassile-->
+    <script src="filter.js"></script>
+  </body>
+</html>
+
+<!-- Seda lehte võiks teha targemalt vältides kopeerimist ja luues oma CMS-i, aga arvan, et selle projekti raames sellest mis hetkel on piisab :) - Raul -->
