@@ -127,7 +127,7 @@ let kohad = [
 document.querySelectorAll('.nimi').forEach(restoran => {
   restoran.addEventListener('click', function(event) {
     localStorage.removeItem('RestoraniInfo');
-    // Söögikoha nime meeldejätmine
+    // Söögikoha nime ülesotsimine ja meeldejätmine
     let söögikoht = event.currentTarget.querySelector('h4').innerText;
     // Vajalike andmete leidmine
     let andmed = kohad.find(rest => rest.Nimi === söögikoht)
@@ -135,7 +135,7 @@ document.querySelectorAll('.nimi').forEach(restoran => {
     // Söögikoha info salvestamine localStorage'isse
     localStorage.setItem('RestoraniInfo', JSON.stringify(andmed));
     }
-    // Uue lehe avamine
+    // Uue lehe avamise funktsioon
     uusKoht();
   });
 });
@@ -143,3 +143,13 @@ document.querySelectorAll('.nimi').forEach(restoran => {
 function uusKoht() {
   window.location.href = 'koht.html';
 };
+
+/* Allikad
+https://developer.mozilla.org/en-US/docs/Web/API/Element/click_event
+
+https://www.w3schools.com/js/js_htmldom_eventlistener.asp
+
+https://stackoverflow.com/questions/41410958/open-a-new-html-page-in-a-js-function-and-then-write-some-html-on-it
+
+https://blog.logrocket.com/localstorage-javascript-complete-guide/
+*/

@@ -23,6 +23,15 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
       } else {
+        // Kui andeid ei saadud kätte, siis kuvab, et andmed puuduvad
         document.getElementById('nimi').innerText = 'Andmed puuduvad';
       }
   })
+
+/* Allikad
+https://blog.logrocket.com/localstorage-javascript-complete-guide/
+
+https://www.w3schools.com/jsref/met_document_getelementbyid.asp
+
+https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event
+*/
