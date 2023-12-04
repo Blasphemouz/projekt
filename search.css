@@ -1,25 +1,45 @@
 *{
-    font-family: inter;
+    font-family: 'Inter', sans-serif;
+}
+
+h4 {
+    font-size: 23px;
+    font-weight: 500;
+    margin-top: 25px;
+    margin-bottom: 8px;
+    padding: 0;
+    z-index: 1;
 }
 
 h3{
     font-size: 25px;
-    font-weight: 400; /* regular */
+    font-weight: 400;
 }
 
 h1 {
-    font-size: 50px;
-    font-weight: 600; /* semi-bold */
+    font-size: 45px;
+    font-weight: 500; /* semi-bold */
     width: 60vw;
     margin-bottom: 60px;
+    margin-top: 40px;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
 }
 
 .centered-text {
     text-align: center;
     display: flex;
     justify-content: center;
-    align-items: center;/* Adjust the height as needed */
+    align-items: center;
     height: 10vh;
+}
+
+.pealkiri {
+    text-decoration: none;
+    color: black;
 }
 
 .sisu {
@@ -27,13 +47,13 @@ h1 {
     max-width: 800px;
 }
 
-#restaurants li {
-    display: block;
-}
-
-#restaurants li.hide {
-    display: none;
-}
+button.nimi {
+    background-color: transparent;
+    border: none;
+    width: 300px;
+    padding: 0;
+    position: relative;
+  }
 
 .buttons {
     display: flex;
@@ -74,4 +94,130 @@ input[type="checkbox"]:checked + label svg {
 input[type="checkbox"]:checked:hover + label svg {
     transform: scale(1);
     filter: brightness(90%);
+}
+
+#restaurants {
+    display: grid;
+    grid-template-rows: 440px 440px;
+    grid-template-columns: 340px 340px 340px;
+    gap: 30px;
+}
+
+#restaurants li {
+    display: block;
+}
+
+#restaurants li.hide {
+    display: none;
+}
+
+.card {
+    display: flex;
+    font-size: 30px;
+    border-radius:50px;
+    width: 320px;
+    height: 410px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    filter: brightness(110%);
+}
+
+.card:hover .card-image{
+    transform: scale(1.15);
+}
+
+.card a {
+    display: block;
+}
+
+.card p {
+    font-size: 20px;
+    font-weight: 400;
+    padding-top: 0;
+}
+
+.card-image {
+    margin-top: 40px;
+    overflow: hidden;
+    background-color: #F6F6F6;
+    border-radius: 30px;
+    box-shadow: 2px 4px 20px 4px rgba(0, 0, 0, 0.18);
+    transition: all 0.6s ease;
+}
+
+.filtrid {
+    display: flex;
+    justify-content: center;
+}
+
+.isic {
+    background-color: #A4E9DD;
+}
+
+.kohvik {
+    background-color: #E5D5B5;
+}
+
+.pubi {
+    background-color: #DFE7AE;
+}
+
+.burger {
+    background-color: #D7CFF4;
+}
+
+.pitsa {
+    background-color: #EACCCC;
+}
+
+.sushi {
+    background-color: #BEEDF7;
+}
+
+.vegan {
+    background-color: #CAEECB;
+}
+
+.filtrid img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+.ratings {
+    display: flex;
+    justify-content: space-between;
+    
+    padding: 0px;
+    margin-left: 83px;
+    margin-right: 60.7px;
+}
+
+.star {
+    margin: 0px;
+    padding: 0px;
+}
+
+.star p {
+    font-weight: 600;
+    font-size: 22px;
+    margin: 0px;
+}
+
+.vertical-line {
+    border-left: 1px solid #9F9F9F;
+    height: 76px;
+    margin-left: 6px;
+}
+
+.price {
+    display: flex;
+    align-items: center;
 }
