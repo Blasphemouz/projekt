@@ -42,7 +42,6 @@ p {
 }
 
 .flexbox-item-1 {
-  align-self: left;
   flex-grow: 0;
 }
 
