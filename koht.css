@@ -3,7 +3,7 @@
   color: #000000;
 }
 
-h1 {
+#nimi {
   font-size: 30px;
   font-weight: 600;
   margin-bottom: 20px;
@@ -42,7 +42,6 @@ p {
 }
 
 .flexbox-item-1 {
-  align-self: left;
   flex-grow: 0;
 }
 
